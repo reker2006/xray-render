@@ -1,0 +1,21 @@
+{
+  "log": { "loglevel": "warning" },
+  "inbounds": [
+    {
+      "listen": "0.0.0.0",
+      "port": 3000,
+      "protocol": "vless",
+      "settings": {
+        "clients": [{ "id": "f504ea4f-6e8b-4654-9ab1-aa52ba1b89d7" }],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "none",
+        "wsSettings": { "path": "/d452a6ecbbe7585f945c" }
+      },
+      "sniffing": { "enabled": true, "destOverride": ["http", "tls"] }
+    }
+  ],
+  "outbounds": [{ "protocol": "freedom", "tag": "direct" }]
+}
